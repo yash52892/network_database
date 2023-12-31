@@ -14,7 +14,7 @@ const NewMovie = (props) => {
       movie_text: movie_text.current.value,
     };
     try{
-      fetch("https://crudcrud.com/api/aef10c03450940c5802245c2ba763676/movies", {
+      fetch("https://crudcrud.com/api/76261c11e1e5403093c6e493895a52a5/movies", {
       method: "POST",
       body: JSON.stringify(movie_obj),
       headers: {
