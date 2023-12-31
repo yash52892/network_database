@@ -14,7 +14,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      let response = await fetch("https://crudcrud.com/api/aef10c03450940c5802245c2ba763676/movies");
+      let response = await fetch("https://crudcrud.com/api/76261c11e1e5403093c6e493895a52a5/movies");
       if (!response.ok) {
         throw new Error("Something went wrong... Retrying");
       }
@@ -46,7 +46,7 @@ function App() {
       </section>
       <section className="section">
         {isLoading && !error && <section className="loader"></section>}
-        {!error && <MoviesList movies={movies} />}
+        {!error && <MoviesList getMovies={fetchmoviesHandler} movies={movies} />}
         {error && <p>{error.message}</p>}
       </section>
     </React.Fragment>
